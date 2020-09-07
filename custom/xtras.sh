@@ -16,3 +16,15 @@ set -o noclobber
 export EDITOR=emacs
 
 eval "$(pyenv init -)"
+
+export PATH="$HOME/.elmenv/bin:$PATH"
+
+eval "$(elmenv init -)"
+
+[ -f "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env" ] && source "${GHCUP_INSTALL_BASE_PREFIX:=$HOME}/.ghcup/env"
+
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(rbenv init -)"
+# rbenv told me to do this
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
