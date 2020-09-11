@@ -28,3 +28,5 @@ export PATH="$HOME/.local/bin:$PATH"
 eval "$(rbenv init -)"
 # rbenv told me to do this
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
+eval `/Applications/DjView.app/Contents/setpath.sh`
